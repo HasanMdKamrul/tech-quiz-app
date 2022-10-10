@@ -1,14 +1,17 @@
-import React from 'react';
-import { Outlet } from 'react-router-dom';
-import { Nav } from '../components/Nav/Nav';
+import React from "react";
+import { Outlet, useLoaderData } from "react-router-dom";
+import { Nav } from "../components/Nav/Nav";
+import { TopicsDataContext } from "../context/Context";
 
 const Main = () => {
-    return (
-        <div>
-          <Nav/>
-          <Outlet/>  
-        </div>
-    );
+  const { data } = useLoaderData();
+
+  return (
+    <TopicsDataContext.Provider value={data}>
+      <Nav />
+      <Outlet />
+    </TopicsDataContext.Provider>
+  );
 };
 
 export default Main;

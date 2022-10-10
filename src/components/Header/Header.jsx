@@ -5,7 +5,7 @@ import quizAnimation from "../../assests/quiz.json";
 
 export const Header = () => {
   return (
-    <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+    <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 border-b-2 border-b-slate-900">
       <div className="flex flex-col items-center justify-between lg:flex-row">
         <div className="mb-10 lg:max-w-lg lg:pr-5 lg:mb-0">
           <div className="max-w-xl mb-6">
@@ -45,7 +45,7 @@ export const Header = () => {
             </Link>
           </div>
         </div>
-        <div className="relative lg:w-1/2">
+        <div className="relative lg:w-1/2 flex justify-center">
           <Lottie animationData={quizAnimation} loop={true} />
         </div>
       </div>
