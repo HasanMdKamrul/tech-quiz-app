@@ -1,5 +1,6 @@
 import ErrorPage from "../components/ErrorPage/ErrorPage";
 import Home from "../components/Home/Home";
+import QuizPlayGround from "../components/QuizPlayGround/QuizPlayGround";
 import quizTopicsLoader from "../loaders/quizTopicLoaders";
 
 const { createBrowserRouter } = require("react-router-dom");
@@ -23,6 +24,11 @@ const router = createBrowserRouter([
                     {
                         path:'/home',
                         element: <Home/>,
+                    },
+                    {
+                        path:'/quiz/:quizId',
+                        element: <QuizPlayGround/>,
+                        loader: ({params:{quizId}}) => fetch(`https://openapi.programming-hero.com/api/quiz/${quizId}`)
                     },
                 ]
             }
