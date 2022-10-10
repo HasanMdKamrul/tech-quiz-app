@@ -5,12 +5,12 @@ export const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+    <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 md:border-b-slate-900 md:border-b-2">
       <div className="relative flex grid items-center grid-cols-2 lg:grid-cols-3">
         <ul className="flex items-center hidden space-x-8 lg:flex">
           <li>
             <NavLink
-              href="/home"
+              to="/home"
               aria-label="Home"
               title="Home"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -20,7 +20,7 @@ export const Nav = () => {
           </li>
           <li>
             <NavLink
-              href="/statistic"
+              to="/statistic"
               aria-label="Statistic"
               title="Statistic"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -30,7 +30,7 @@ export const Nav = () => {
           </li>
           <li>
             <NavLink
-              href="/blog"
+              to="/blog"
               aria-label="blog"
               title="blog"
               className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -40,7 +40,7 @@ export const Nav = () => {
           </li>
         </ul>
         <NavLink
-          href="/"
+          to="/"
           aria-label="Company"
           title="Company"
           className="inline-flex items-center lg:mx-auto"
@@ -93,7 +93,7 @@ export const Nav = () => {
                 <div className="flex items-center justify-between mb-4">
                   <div>
                     <NavLink
-                      href="/"
+                      to="/"
                       aria-label="Company"
                       title="Company"
                       className="inline-flex items-center"
@@ -138,7 +138,7 @@ export const Nav = () => {
                   <ul className="space-y-4">
                     <li>
                       <NavLink
-                        href="/home"
+                        to="/home"
                         aria-label="Home"
                         title="Home"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -148,7 +148,7 @@ export const Nav = () => {
                     </li>
                     <li>
                       <NavLink
-                        href="/statistic"
+                        to="/statistic"
                         aria-label="Statistic"
                         title="Statistic"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
@@ -158,7 +158,7 @@ export const Nav = () => {
                     </li>
                     <li>
                       <NavLink
-                        href="/blog"
+                        to="/blog"
                         aria-label="Blog"
                         title="Blog"
                         className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
