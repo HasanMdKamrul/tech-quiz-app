@@ -1,3 +1,4 @@
+import Blog from "../components/Blog/Blog";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
 import Home from "../components/Home/Home";
 import QuizPlayGround from "../components/QuizPlayGround/QuizPlayGround";
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
                     {
                         path:'/statistic',
                         element: <Statistics/>
+                    },
+                    {
+                        path:'/blog',
+                        element: <Blog/>
                     },
                     {
                         path:'/quiz/:quizId',
