@@ -45,7 +45,6 @@ const QuestionsAndAnswers = () => {
         />
       ))}
       </div>
-      
     </div>
   );
 };
