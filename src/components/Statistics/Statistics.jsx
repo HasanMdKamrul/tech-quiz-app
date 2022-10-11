@@ -23,12 +23,12 @@ const Statistics = () => {
       <div className="flex justify-center">
         <section>
           <BarChart
-            width={500}
+            width={420}
             height={300}
             data={topicsData}
             margin={{
               top: 20,
-              right: 30,
+              right: 40,
               left: 20,
               bottom: 5,
             }}
