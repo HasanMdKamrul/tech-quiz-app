@@ -1,7 +1,7 @@
 import {
-    ForwardIcon,
-    PlayIcon,
-    QuestionMarkCircleIcon
+  ForwardIcon,
+  PlayIcon,
+  QuestionMarkCircleIcon
 } from "@heroicons/react/24/solid";
 import React from "react";
 import { useNavigate } from "react-router-dom";
@@ -15,7 +15,7 @@ const QuizCard = ({ quiz: { name, logo, total, id } }) => {
 
   return (
     <div className="overflow-hidden transition-shadow duration-300 bg-gray-100 rounded shadow-2xl">
-      <img src={logo} className="object-cover w-full h-64" alt="" />
+      <img src={logo} className="object-cover w-full" alt="" />
       <div className="p-5 border border-t-0">
         <p className="mb-3 text-xs font-semibold tracking-wide uppercase">
           <a
