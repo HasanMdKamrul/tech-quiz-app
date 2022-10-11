@@ -2,7 +2,7 @@
 
 # TECH-QUIZ
 
-# To see live: visit
+# To see live: https://tech-quiz-app-kamrul.netlify.app/
 
 ### Author : Md Kamrul Hasan
 
