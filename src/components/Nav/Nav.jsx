@@ -4,16 +4,19 @@ import { NavLink } from "react-router-dom";
 export const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // ** "font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+
   return (
     <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 md:border-b-gray-100 md:border-b-2">
       <div className="relative flex grid items-center grid-cols-2 lg:grid-cols-3">
         <ul className="flex items-center hidden space-x-8 lg:flex">
           <li>
-            <NavLink
+            <NavLink 
+
               to="/home"
               aria-label="Home"
               title="Home"
-              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+              className={({isActive})=> isActive ? "font-medium tracking-wide text-blue-600 transition-colors duration-200 hover:text-deep-purple-accent-400": "font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"}
             >
               Home
             </NavLink>
@@ -23,7 +26,7 @@ export const Nav = () => {
               to="/statistic"
               aria-label="Statistic"
               title="Statistic"
-              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+              className={({isActive})=> isActive ? "font-medium tracking-wide text-blue-600 transition-colors duration-200 hover:text-deep-purple-accent-400": "font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"}
             >
               Statistic
             </NavLink>
@@ -33,7 +36,7 @@ export const Nav = () => {
               to="/blog"
               aria-label="blog"
               title="blog"
-              className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+              className={({isActive})=> isActive ? "font-medium tracking-wide text-blue-600 transition-colors duration-200 hover:text-deep-purple-accent-400": "font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"}
             >
               Blog
             </NavLink>
@@ -46,7 +49,7 @@ export const Nav = () => {
           className="inline-flex items-center lg:mx-auto"
         >
           <svg
-            className="w-8 text-deep-purple-accent-400"
+            className="w-8 text-sky-400"
             viewBox="0 0 24 24"
             strokeLinejoin="round"
             strokeWidth="2"
@@ -60,7 +63,7 @@ export const Nav = () => {
             <rect x="14" y="1" width="7" height="6" />
             <rect x="14" y="11" width="7" height="12" />
           </svg>
-          <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
+          <span className="ml-2 text-xl font-bold tracking-wide uppercase text-sky-400">
             Tech-quiz
           </span>
         </NavLink>
@@ -141,7 +144,7 @@ export const Nav = () => {
                         to="/home"
                         aria-label="Home"
                         title="Home"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        className={({isActive})=> isActive ? "font-medium tracking-wide text-blue-600 transition-colors duration-200 hover:text-deep-purple-accent-400": "font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"}
                       >
                         Home
                       </NavLink>
@@ -151,7 +154,7 @@ export const Nav = () => {
                         to="/statistic"
                         aria-label="Statistic"
                         title="Statistic"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        className={({isActive})=> isActive ? "font-medium tracking-wide text-blue-600 transition-colors duration-200 hover:text-deep-purple-accent-400": "font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"}
                       >
                         Statistic
                       </NavLink>
@@ -161,7 +164,7 @@ export const Nav = () => {
                         to="/blog"
                         aria-label="Blog"
                         title="Blog"
-                        className="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        className={({isActive})=> isActive ? "font-medium tracking-wide text-blue-600 transition-colors duration-200 hover:text-deep-purple-accent-400": "font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"}
                       >
                         Blog
                       </NavLink>
