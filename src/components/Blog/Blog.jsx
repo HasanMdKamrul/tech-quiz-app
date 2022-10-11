@@ -1,3 +1,4 @@
+import { HomeModernIcon } from "@heroicons/react/24/solid";
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -143,11 +144,13 @@ const Blog = () => {
         </div>
       </div>
       <div className="mt-5 flex justify-center">
+        
         <Link
           rel="noopener noreferrer"
           to="/"
-          className="px-8 py-3 font-semibold rounded bg-sky-400 text-black"
+          className="px-8 py-3 font-semibold rounded bg-sky-400 text-white flex"
         >
+            <HomeModernIcon className="w-6 h-6 mr-2"/>
           Back to homepage
         </Link>
       </div>
