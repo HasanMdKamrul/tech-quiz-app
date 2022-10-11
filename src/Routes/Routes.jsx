@@ -1,6 +1,7 @@
 import ErrorPage from "../components/ErrorPage/ErrorPage";
 import Home from "../components/Home/Home";
 import QuizPlayGround from "../components/QuizPlayGround/QuizPlayGround";
+import Statistics from "../components/Statistics/Statistics";
 import quizTopicsLoader from "../loaders/quizTopicLoaders";
 
 const { createBrowserRouter } = require("react-router-dom");
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
                     {
                         path:'/home',
                         element: <Home/>,
+                    },
+                    {
+                        path:'/statistic',
+                        element: <Statistics/>
                     },
                     {
                         path:'/quiz/:quizId',
