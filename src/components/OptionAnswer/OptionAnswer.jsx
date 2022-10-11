@@ -38,10 +38,10 @@ const Options = ({ option,correctAnswer }) => {
         <ul>
                 <li className="w-full m-2">
                     <div className="flex items-center pl-3">
-                        <input onChange={changeHandler} id="horizontal-list-radio-license" type="radio" value={option} name="list-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"/>
-                        <label htmlFor="horizontal-list-radio-license" className={`py-3 ml-2 w-full text-sm font-medium
+                        
+                        <label htmlFor={option} className={`py-3 ml-2 w-full text-sm flex items-center font-medium
                         ${answer ? " text-blue-700" :  "text-black"}
-                        `}>{option}</label>
+                        `}><input onChange={changeHandler} id={option} type="radio" value={option} name="list-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"/>{option}</label>
                     </div>
                 </li>
         </ul>
@@ -53,10 +53,10 @@ const Options = ({ option,correctAnswer }) => {
           <ul>
                   <li className="w-full m-2">
                       <div className="flex items-center pl-3">
-                          <input onChange={changeHandler} id="horizontal-list-radio-license" type="radio" value={option} name="list-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"/>
-                          <label htmlFor="horizontal-list-radio-license" className={`py-3 ml-2 w-full text-sm font-medium
+                          
+                          <label htmlFor={option} className={`py-3 ml-2 w-full text-sm flex items-center font-medium
                          text-red
-                          `}>{option}</label>
+                          `}><input onChange={changeHandler} id={option} type="radio" value={option} name="list-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"/>{option}</label>
                       </div>
                   </li>
           </ul>
