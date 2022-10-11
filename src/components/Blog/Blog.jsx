@@ -67,7 +67,7 @@ const Blog = () => {
               Firstly, In order to understand how react-router works, you need
               to understand the basics of the client-side-routing and
               server-side-routing.In short, React router is an API for React
-              Applications. React router at it's core gives us the oppotunity or
+              applications. React router at it's core gives us the oppotunity or
               power to render our app dynamically in the client-side-routing. In
               contrary,in conventinal routing it will request the server every
               time for the information and render the data when it get's the
@@ -103,7 +103,7 @@ const Blog = () => {
               First of all, The React Context API is a way for a React app to
               effectively produce global variables that can be passed around.
               This is the alternative to "prop drilling" or moving props from
-              grandparent to child to parent, and so on. This one of the best
+              grandparent to child to parent, and so on. This is one of the best
               and lighter approach which comes built-in with react and give the
               developers so much freedom to use nested components data share and
               flow.
@@ -134,7 +134,7 @@ const Blog = () => {
             </h6>
             <p className="mb-3 text-sm text-gray-900">
               In react, we know every time a value which is mutable, cause a
-              re-render. Due to this re-render performance impacted when a large
+              re-render. Due to this re-render, performance impacted when a large
               component re-renders, due to that react provides something called
               useRef() which you can consider as a box , which stores the
               mutable data and prevents re-rendering. It can be used to access a
