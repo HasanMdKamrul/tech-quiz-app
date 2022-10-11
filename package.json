@@ -1,5 +1,6 @@
 {
   "name": "tech-quiz",
+  "author": "Md Kamrul Hasan",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
