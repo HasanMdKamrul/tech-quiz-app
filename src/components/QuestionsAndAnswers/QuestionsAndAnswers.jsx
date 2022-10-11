@@ -4,12 +4,9 @@ import { toast } from "react-toastify";
 import { IndividualTopicContext } from "../../context/Context";
 import OptionAnswer from "../OptionAnswer/OptionAnswer";
 
-const QuestionsAndAnswers = () => {
- 
+const QuestionsAndAnswers = ({index}) => {
 
   const {question,correctAnswer,options} = useContext(IndividualTopicContext);
-
-
 
   const correctAnswerDisplay = () => {
     toast.info(`${correctAnswer}`, {
@@ -26,7 +23,7 @@ const QuestionsAndAnswers = () => {
     <div className="bg-sky-100 p-5 rounded-2xl m-2">
       <div className="flex justify-between ">
         <div>
-        <h1 className="text-xl font-bold">Question : {question}</h1>
+        <h1 className="text-xl font-bold">Question <span>{index + 1}</span> : {question}</h1>
         </div>
         <div>
         <EyeIcon

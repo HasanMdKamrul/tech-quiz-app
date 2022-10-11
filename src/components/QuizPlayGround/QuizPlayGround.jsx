@@ -54,13 +54,14 @@ const QuizPlayGround = () => {
 
             <div className="flex justify-center">
               <div className="grid md:grid-cols-1 p-5 text-black ">
-                {questions.map((questionItem) => {
+                {questions.map((questionItem,index) => {
                   return (
                     <IndividualTopicContext.Provider
+                    
                       key={questionItem.id}
                       value={questionItem}
                     >
-                      <QuestionsAndAnswers />
+                      <QuestionsAndAnswers index={index} />
                     </IndividualTopicContext.Provider>
                   );
                 })}

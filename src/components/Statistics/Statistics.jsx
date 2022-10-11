@@ -2,13 +2,13 @@ import { HomeModernIcon } from "@heroicons/react/24/solid";
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import {
-    Bar,
-    BarChart,
-    CartesianGrid,
-    Legend,
-    Tooltip,
-    XAxis,
-    YAxis
+  Bar,
+  BarChart,
+  CartesianGrid,
+  Legend,
+  Tooltip,
+  XAxis,
+  YAxis
 } from "recharts";
 import { TopicsDataContext } from "../../context/Context";
 
