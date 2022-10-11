@@ -36,7 +36,7 @@ const QuestionsAndAnswers = () => {
         </div>
         
       </div>
-      <div >
+      
       {options.map((option, index) => (
         <OptionAnswer
           key={index}
@@ -44,7 +44,7 @@ const QuestionsAndAnswers = () => {
           option={option}
         />
       ))}
-      </div>
+      
     </div>
   );
 };
