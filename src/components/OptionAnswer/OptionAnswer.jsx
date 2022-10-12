@@ -42,10 +42,10 @@ const Options = ({ option,correctAnswer }) => {
                         <div onClick={()=>changeHandler(option)}  className="py-3 ml-2 w-full text-sm flex items-center font-medium
                          text-red">
                           {
-                            answer && <CheckBadgeIcon className="w-6 h-6 text-blue-500 mr-2"/>
+                            answer && <div><CheckBadgeIcon className="w-6 h-6 text-blue-500 mr-2"/></div>
                           }
                           {
-                            !answer &&  <XCircleIcon className="w-6 h-6 text-red-200 mr-2" />
+                            !answer &&  <div><XCircleIcon className="w-6 h-6 text-red-200 mr-2" /></div>
                           }
                             {option}
                         </div>
@@ -62,7 +62,9 @@ const Options = ({ option,correctAnswer }) => {
                     <div className="flex items-center pl-3">
                         <div onClick={()=> changeHandler(option)}  className="py-3 ml-2 w-full text-sm flex items-center font-medium
                          text-red">
-                          <Cog8ToothIcon className="w-6 h-6 text-green-600 mr-2"/>
+                          <div>
+                            <Cog8ToothIcon className="w-6 h-6 text-green-600 mr-2"/>
+                          </div>
                             {option}
                         </div>
                     </div>
