@@ -39,13 +39,13 @@ const QuizPlayGround = () => {
             </h2>
             <div className="flex justify-center gap-2">
               {correct.length > 0 && (
-                <kbd class="px-2 py-1.5 text-xs flex items-center font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
+                <kbd className="px-2 py-1.5 text-xs flex items-center font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
                   <ShieldCheckIcon className="w-6 h-6" />
                   {correct.length}
                 </kbd>
               )}
               {inCorrect.length > 0 && (
-                <kbd class="px-2 py-1.5 text-xs flex items-center font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
+                <kbd className="px-2 py-1.5 text-xs flex items-center font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500">
                   <XMarkIcon className="w-6 h-6" />
                   {inCorrect.length}
                 </kbd>

@@ -1,3 +1,4 @@
+import { CheckBadgeIcon, Cog8ToothIcon, XCircleIcon } from "@heroicons/react/24/solid";
 import React, { useContext, useState } from "react";
 import { toast } from "react-toastify";
 import { CorrectContext, InCorrectContext } from "../../context/Context";
@@ -12,23 +13,23 @@ const Options = ({ option,correctAnswer }) => {
   
 
 
-  const changeHandler = (event) => {
+  const changeHandler = (option) => {
 
-    event.target.value && setSelected(true);
+   option && setSelected(true);
     
-    if (event.target.value === correctAnswer  ) {
-        setCorrect([...correct,event.target.value])
+    if (option === correctAnswer  ) {
+        setCorrect([...correct,option])
         toast.success('Congratulations! Correct Answer!',{autoClose:500});
         setAnswer(true)
     } else{
-      setInCorrect([...inCorrect,event.target.value])
+      setInCorrect([...inCorrect,option])
         toast.error('Oh no! Incorrect Answer!',{autoClose:500});
         setAnswer(false);
     }
 
   };
 
-  // ** selected ? color ekta : 
+
 
   return (
 
@@ -38,10 +39,16 @@ const Options = ({ option,correctAnswer }) => {
         <ul>
                 <li className="w-full m-2">
                     <div className="flex items-center pl-3">
-                        
-                        <label htmlFor={option} className={`py-3 ml-2 w-full text-sm flex items-center font-medium
-                        ${answer ? " text-blue-700" :  "text-black"}
-                        `}><input onChange={changeHandler} id={option} type="radio" value={option} name="list-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"/>{option}</label>
+                        <div onClick={()=>changeHandler(option)}  className="py-3 ml-2 w-full text-sm flex items-center font-medium
+                         text-red">
+                          {
+                            answer && <CheckBadgeIcon className="w-6 h-6 text-blue-500 mr-2"/>
+                          }
+                          {
+                            !answer &&  <XCircleIcon className="w-6 h-6 text-red-200 mr-2" />
+                          }
+                            {option}
+                        </div>
                     </div>
                 </li>
         </ul>
@@ -51,14 +58,15 @@ const Options = ({ option,correctAnswer }) => {
         !selected && (
           <div className={`rounded-xl shadow bg-sky-200`}>
           <ul>
-                  <li className="w-full m-2">
-                      <div className="flex items-center pl-3">
-                          
-                          <label htmlFor={option} className={`py-3 ml-2 w-full text-sm flex items-center font-medium
-                         text-red
-                          `}><input onChange={changeHandler} id={option} type="radio" value={option} name="list-radio" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"/>{option}</label>
-                      </div>
-                  </li>
+          <li className="w-full m-2">
+                    <div className="flex items-center pl-3">
+                        <div onClick={()=> changeHandler(option)}  className="py-3 ml-2 w-full text-sm flex items-center font-medium
+                         text-red">
+                          <Cog8ToothIcon className="w-6 h-6 text-green-600 mr-2"/>
+                            {option}
+                        </div>
+                    </div>
+                </li>
           </ul>
       </div>
         )
